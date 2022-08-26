@@ -1,0 +1,455 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ÂµVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Michael Barakat, none, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.7.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\Study\Courses\Embedded Systems\EGY FWD (Advanced Embedded Systems)\(Project 1) LED Control\Keil\LED Control.uvprojx
+Project File Date:  08/25/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'TM4C123GH6PM'
+../Source/MCAL/Mcu.c(17): warning: In file included from...
+../Source/Common\Mcu_Hw.h(26): warning: // comments are not allowed in this language [-Wcomment]
+ // CORTEX_M4 Core Peripherals base address
+ ^
+1 warning generated.
+compiling Mcu.c...
+../Source/App/Main.c(16): warning: In file included from...
+../Source/Common\Bit_Math.h(31): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+../Source/App/Main.c(17): warning: In file included from...
+../Source/MCAL/Include\Timer.h(17): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h"
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+2 warnings generated.
+compiling Main.c...
+../Source/Config/Nvic_Lcfg.c(15): warning: In file included from...
+../Source/MCAL/Include\Nvic.h(19): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h" 
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+../Source/Config/Nvic_Lcfg.c(16): warning: non-portable path to file '"Nvic_Cfg.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "Nvic_cfg.h"
+         ^~~~~~~~~~~~
+         "Nvic_Cfg.h"
+2 warnings generated.
+compiling Nvic_Lcfg.c...
+compiling Mcu_Lcfg.c...
+../Source/MCAL/Nvic.c(15): warning: In file included from...
+../Source/MCAL/Include\Nvic.h(19): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h" 
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+../Source/MCAL/Nvic.c(16): warning: non-portable path to file '"Mcu_Hw.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mcu_hw.h"
+         ^~~~~~~~~~
+         "Mcu_Hw.h"
+../Source/MCAL/Nvic.c(16): warning: In file included from...
+../Source/Common\mcu_hw.h(26): warning: // comments are not allowed in this language [-Wcomment]
+ // CORTEX_M4 Core Peripherals base address
+ ^
+../Source/MCAL/Nvic.c(17): warning: non-portable path to file '"Nvic_Cfg.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "Nvic_cfg.h"
+         ^~~~~~~~~~~~
+         "Nvic_Cfg.h"
+../Source/MCAL/Nvic.c(77): error: no member named 'Group_priorority' in 'NVIC_CfgType'; did you mean 'Group_Priority'?
+                Group           = NVIC_Cfg[i].Group_priorority;
+                                              ^~~~~~~~~~~~~~~~
+                                              Group_Priority
+../Source/MCAL/Include\Nvic.h(163): note: 'Group_Priority' declared here
+        uint8                   Group_Priority;
+                                ^
+../Source/MCAL/Nvic.c(78): error: no member named 'SubGroup_priorority' in 'NVIC_CfgType'; did you mean 'SubGroup_Priority'?
+                SubGroup = NVIC_Cfg[i].SubGroup_priorority;
+                                       ^~~~~~~~~~~~~~~~~~~
+                                       SubGroup_Priority
+../Source/MCAL/Include\Nvic.h(164): note: 'SubGroup_Priority' declared here
+        uint8                   SubGroup_Priority;
+                                ^
+../Source/MCAL/Nvic.c(83): warning: implicit declaration of function 'GET_HWREG' [-Wimplicit-function-declaration]
+                GET_HWREG(NVIC_BASE_ADDRESS,enRegOffset) |= (1 << enBitOffset);
+                ^
+../Source/MCAL/Nvic.c(83): error: use of undeclared identifier 'NVIC_BASE_ADDRESS'
+                GET_HWREG(NVIC_BASE_ADDRESS,enRegOffset) |= (1 << enBitOffset);
+                          ^
+../Source/MCAL/Nvic.c(105): error: use of undeclared identifier 'NVIC_prior_BASE_ADDRESS'
+                        GET_HWREG(NVIC_prior_BASE_ADDRESS,priorRegOffset) |= (GroupingField << priorBitOffset);
+                                  ^
+../Source/MCAL/Nvic.c(63): warning: no previous prototype for function 'NVIC_init' [-Wmissing-prototypes]
+void NVIC_init(void)
+     ^
+../Source/MCAL/Nvic.c(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void NVIC_init(void)
+^
+static 
+6 warnings and 4 errors generated.
+compiling Nvic.c...
+compiling Cpu_Driver.c...
+assembling startup_TM4C123.s...
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(19): warning: // comments are not allowed in this language [-Wcomment]
+//-------- <<< Use Configuration Wizard in Context Menu >>> ------------------
+^
+45 warnings generated.
+compiling system_TM4C123.c...
+../Source/MCAL/Timer.c(16): warning: In file included from...
+../Source/Config\Timer_Cfg.h(17): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h"
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+../Source/MCAL/Timer.c(17): warning: In file included from...
+../Source/MCAL/Include\Timer.h(17): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h"
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+../Source/MCAL/Timer.c(18): warning: non-portable path to file '"Mcu_Hw.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mcu_hw.h"
+         ^~~~~~~~~~
+         "Mcu_Hw.h"
+../Source/MCAL/Timer.c(18): warning: In file included from...
+../Source/Common\mcu_hw.h(26): warning: // comments are not allowed in this language [-Wcomment]
+ // CORTEX_M4 Core Peripherals base address
+ ^
+../Source/MCAL/Timer.c(39): error: use of undeclared identifier 'GPT_16_32_BIT_TIMER0_BASE_ADDRESS'
+static const uint32 Gpt_BaseAddress[MAX_NUMBER_OF_GPIO_GPT] = {GPT_16_32_BIT_TIMER0_BASE_ADDRESS,                       
+                                                               ^
+../Source/MCAL/Timer.c(40): error: use of undeclared identifier 'GPT_16_32_BIT_TIMER1_BASE_ADDRESS'
+                                                                   GPT_16_32_BIT_TIMER1_BASE_ADDRESS,           
+                                                                   ^
+../Source/MCAL/Timer.c(41): error: use of undeclared identifier 'GPT_16_32_BIT_TIMER2_BASE_ADDRESS'
+                                                                   GPT_16_32_BIT_TIMER2_BASE_ADDRESS,                   
+                                                                   ^
+../Source/MCAL/Timer.c(42): error: use of undeclared identifier 'GPT_16_32_BIT_TIMER3_BASE_ADDRESS'
+                                                                   GPT_16_32_BIT_TIMER3_BASE_ADDRESS,                   
+                                                                   ^
+../Source/MCAL/Timer.c(43): error: use of undeclared identifier 'GPT_16_32_BIT_TIMER4_BASE_ADDRESS'
+                                                                   GPT_16_32_BIT_TIMER4_BASE_ADDRESS,                   
+                                                                   ^
+../Source/MCAL/Timer.c(44): error: use of undeclared identifier 'GPT_16_32_BIT_TIMER5_BASE_ADDRESS'
+                                                                   GPT_16_32_BIT_TIMER5_BASE_ADDRESS,                   
+                                                                   ^
+../Source/MCAL/Timer.c(45): error: use of undeclared identifier 'GPT_32_64_BIT_WIDE_TIMER0_BASE_ADDRESS'
+                                                                   GPT_32_64_BIT_WIDE_TIMER0_BASE_ADDRESS,
+                                                                   ^
+../Source/MCAL/Timer.c(46): error: use of undeclared identifier 'GPT_32_64_BIT_WIDE_TIMER1_BASE_ADDRESS'
+                                                                   GPT_32_64_BIT_WIDE_TIMER1_BASE_ADDRESS,
+                                                                   ^
+../Source/MCAL/Timer.c(47): error: use of undeclared identifier 'GPT_32_64_BIT_WIDE_TIMER2_BASE_ADDRESS'
+                                                                   GPT_32_64_BIT_WIDE_TIMER2_BASE_ADDRESS,
+                                                                   ^
+../Source/MCAL/Timer.c(48): error: use of undeclared identifier 'GPT_32_64_BIT_WIDE_TIMER3_BASE_ADDRESS'
+                                                                   GPT_32_64_BIT_WIDE_TIMER3_BASE_ADDRESS,
+                                                                   ^
+../Source/MCAL/Timer.c(49): error: use of undeclared identifier 'GPT_32_64_BIT_WIDE_TIMER4_BASE_ADDRESS'
+                                                                   GPT_32_64_BIT_WIDE_TIMER4_BASE_ADDRESS,
+                                                                   ^
+../Source/MCAL/Timer.c(50): error: use of undeclared identifier 'GPT_32_64_BIT_WIDE_TIMER5_BASE_ADDRESS'
+                                                                   GPT_32_64_BIT_WIDE_TIMER5_BASE_ADDRESS};
+                                                                   ^
+../Source/MCAL/Timer.c(74): warning: unused parameter 'ConfigPtr' [-Wunused-parameter]
+void Gpt_Init( const Gpt_ConfigType* ConfigPtr)
+                                     ^
+../Source/MCAL/Timer.c(89): warning: unused parameter 'Channel' [-Wunused-parameter]
+Gpt_ValueType Gpt_GetTimeRemaining( Gpt_ChannelType Channel )
+                                                    ^
+../Source/MCAL/Timer.c(106): warning: unused parameter 'Channel' [-Wunused-parameter]
+void Gpt_StartTimer( Gpt_ChannelType Channel, Gpt_ValueType Value )
+                                     ^
+../Source/MCAL/Timer.c(106): warning: unused parameter 'Value' [-Wunused-parameter]
+void Gpt_StartTimer( Gpt_ChannelType Channel, Gpt_ValueType Value )
+                                                            ^
+../Source/MCAL/Timer.c(121): warning: unused parameter 'Channel' [-Wunused-parameter]
+void Gpt_StopTimer( Gpt_ChannelType Channel )
+                                    ^
+../Source/MCAL/Timer.c(128): warning: no previous prototype for function 'TIMER0A_Handler' [-Wmissing-prototypes]
+void TIMER0A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(128): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER0A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(133): warning: no previous prototype for function 'TIMER1A_Handler' [-Wmissing-prototypes]
+void TIMER1A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(133): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER1A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(138): warning: no previous prototype for function 'TIMER2A_Handler' [-Wmissing-prototypes]
+void TIMER2A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(138): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER2A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(143): warning: no previous prototype for function 'TIMER3A_Handler' [-Wmissing-prototypes]
+void TIMER3A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(143): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER3A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(148): warning: no previous prototype for function 'TIMER4A_Handler' [-Wmissing-prototypes]
+void TIMER4A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(148): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER4A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(153): warning: no previous prototype for function 'TIMER5A_Handler' [-Wmissing-prototypes]
+void TIMER5A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(153): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIMER5A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(158): warning: no previous prototype for function 'WTIMER0A_Handler' [-Wmissing-prototypes]
+void WTIMER0A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(158): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WTIMER0A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(163): warning: no previous prototype for function 'WTIMER1A_Handler' [-Wmissing-prototypes]
+void WTIMER1A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(163): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WTIMER1A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(168): warning: no previous prototype for function 'WTIMER2A_Handler' [-Wmissing-prototypes]
+void WTIMER2A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(168): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WTIMER2A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(173): warning: no previous prototype for function 'WTIMER3A_Handler' [-Wmissing-prototypes]
+void WTIMER3A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(173): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WTIMER3A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(178): warning: no previous prototype for function 'WTIMER4A_Handler' [-Wmissing-prototypes]
+void WTIMER4A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(178): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WTIMER4A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(183): warning: no previous prototype for function 'WTIMER5A_Handler' [-Wmissing-prototypes]
+void WTIMER5A_Handler(void)
+     ^
+../Source/MCAL/Timer.c(183): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WTIMER5A_Handler(void)
+^
+static 
+../Source/MCAL/Timer.c(30): warning: no previous extern declaration for non-static variable 'locGptNotification' [-Wmissing-variable-declarations]
+GptNotification locGptNotification[MAX_NUMBER_OF_GPIO_GPT];
+                ^
+../Source/MCAL/Timer.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GptNotification locGptNotification[MAX_NUMBER_OF_GPIO_GPT];
+^
+22 warnings and 12 errors generated.
+compiling Timer.c...
+../Source/Config/Timer_Lcfg.c(16): warning: In file included from...
+../Source/Config/Timer_Cfg.h(17): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h"
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+../Source/Config/Timer_Lcfg.c(17): warning: In file included from...
+../Source/MCAL/Include\Timer.h(17): warning: non-portable path to file '"Platform_Types.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "platform_Types.h"
+         ^~~~~~~~~~~~~~~~~~
+         "Platform_Types.h"
+2 warnings generated.
+compiling Timer_Lcfg.c...
+".\Objects\LED Control.axf" - 16 Error(s), 80 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_TM4C123GH6PM
+  C:/Users/Michael/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Michael/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device/Source/system_TM4C123.c
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
