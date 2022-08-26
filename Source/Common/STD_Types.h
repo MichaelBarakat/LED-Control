@@ -12,8 +12,10 @@
 #ifndef STD_TYPES_H
 #define STD_TYPES_H
 
-#define CLR_PTR       ((void *)0)
-#define Clear					  0
+
+
+#define NULL_PTR       ((void *)0)
+#define NULL								0
 
 typedef enum{
 	Pending,

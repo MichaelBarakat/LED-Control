@@ -36,6 +36,16 @@
 #endif
 
 
+#ifndef STD_ON
+   #define STD_ON  1u
+#endif
+
+
+#ifndef STD_OFF
+   #define STD_OFF  0u
+#endif
+
+
 
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS

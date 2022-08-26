@@ -13,7 +13,7 @@
 /**********************************************************************************************************************
  * INCLUDES
  *********************************************************************************************************************/
-#include "platform_Types.h"
+#include "Platform_Types.h"
 #include "Std_Types.h"
 #include "Mcu_Cfg.h"
 /**********************************************************************************************************************
@@ -29,25 +29,8 @@
 /**********************************************************************************************************************
  *  GLOBAL DATA TYPES AND STRUCTURES
  *********************************************************************************************************************/
-typedef enum
-{
-	MCU_PLL_STATUS_UNLOCKED,
-	MCU_PLL_STATUS_LOCKED,
-	MCU_PLL_STATUS_UNKNOWN
-}Mcu_PllStatusType;
 
 typedef uint8 Mcu_ClockType;
-
-
-typedef uint32 Mcu_HwResetCause;
-#define	MCU_EXT_RESET				1u
-#define	MCU_POWER_ON_RESET				2u
-#define	MCU_BROWN_OUT_RESET				4u
-#define	MCU_WDT0_RESET						8u
-#define	MCU_SOFTWARE_RESET				16u
-#define	MCU_WDT1_RESET						32u
-#define	MCU_MOSC_FAILURE_RESET		0x10000uL
-
 
 
 typedef enum
@@ -64,7 +47,6 @@ typedef uint32 Mcu_FreqType;
 typedef struct
 {
 	Mcu_ClockSourceType ClockSource;
-	boolean PllUse;
 	Mcu_FreqType Freq_KHz;
 	
 }Mcu_ConfigType;
@@ -112,7 +94,7 @@ Mcu_HwResetCause Mcu_GetResetHwValue( void );
 * \Parameters (out): None                                                      
 * \Return value:   : None
 *******************************************************************************/
-#if (MCU_PERFORM_RESET_API==STD_ON)
+#if (MCU_PERFORM_RESET==STD_ON)
 void Mcu_PerformReset( void );
 #endif
 /******************************************************************************
