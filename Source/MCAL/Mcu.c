@@ -20,7 +20,7 @@
 *  LOCAL MACROS CONSTANT\FUNCTION
 *********************************************************************************************************************/
 
-#define APINT_VECTKEY 											0x05FA 	/**This field is used to guard against accidental writes to this register**/
+#define APINT_VECTKEY 							0x05FA 	/**This field is used to guard against accidental writes to this register**/
 #define APINT_VECTKEY_BITFIELD			    			16u
 #define SYSTEM_RESET_REQUEST_BITFIELD					2u 			/*System RESET Request*/
 
